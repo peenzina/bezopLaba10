@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Лаба 10 (3 числа)</title>
+</head>
+    <body>
+        <script>
+        function result(){
+            var a = Number(document.getElementById("a").value);
+            var b = Number(document.getElementById("b").value);
+            var c = Number(document.getElementById("c").value);
+            var infoValue = document.getElementById("list").value;
+            switch (infoValue){
+                case "addition":
+                    document.writeln((a+b)%c);
+                    break;
+
+                case "multiplication":
+                    document.writeln((a*b)%c);
+                    break;
+
+                case "degree":
+                    document.writeln((a**b)%c);
+                    break;
+            }
+        }
+        </script>
+        <form id="numbers">
+            <input type = "text" placeholder="Введите a" id = "a">
+            <input type = "text" placeholder="Введите b" id = "b">
+            <input type = "text" placeholder="Введите c (модуль)" id = "c">
+            <select id="list">
+                <option value="degree">Степень</option>
+                <option value="addition">Сложение</option>
+                <option value="multiplication">Умножение</option>
+            </select>
+            <input type="button" onclick ="result()" value="Отправить">
+        </form>
+    </body>
+</html>
